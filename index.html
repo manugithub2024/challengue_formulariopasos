@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario por Pasos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <form id="regForm">
+        
+        <!-- Paso 1 -->
+        <div class="tab">
+        <h1>INFORMACION PERSONAL</h1>
+        <H2>Porfavor ingresa tu nombre, correo electronico y telefono</H2>
+            <p><input placeholder="Nombres y apellidos" oninput="this.className = ''"></p>
+            <p><input placeholder="Correo Electronico" oninput="this.className = ''"></p>
+            <p><input placeholder="Numero de Telefono" oninput="this.className = ''"></p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="tab">
+            <h1>SELECCIONA TU PLAN</h1>
+            <h2>TIENES LA OPCION DE SELECCIONA LA OPCION QUE MEJOR SE AJUSTE</h2>
+            <div class="plan">
+                <label class="column" for="standard">
+                    STANDAR
+                    <input type="radio" id="standard" name="plan" value="standard">
+                </label>
+                <label class="column" for="advanced">
+                    AVANZADO
+                    <input type="radio" id="advanced" name="plan" value="advanced">
+                </label>
+                <label class="column" for="professional">
+                    PROFESIONAL
+                    <input type="radio" id="professional" name="plan" value="professional">
+                </label>
+            </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="tab">
+            <h1>ELIGE LOS COMPLEMENTOS</h1>
+            <h2>LOS COMPLEMENTOS AYUDAN A MEJORAR TU EXPERIENCIA.</h2>
+                <div class="complemento">
+                <label for="html">SERVICIOS EN LINEA</label>
+                <input type="checkbox" id="checkbox1"></div><br>
+                <div class="complemento">
+                <label for="html">MAYOR ALMACENAMIENTO</label>
+                <input type="checkbox" id="checkbox1"></div>
+                <div class="complemento">
+                <label for="html">PERFIL PERSONALIZABLE</label>
+                <input type="checkbox" id="checkbox1"></div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="tab">
+            <h1>TERMINADO</h1>
+            <h2>RESUMEN</h2>
+              
+            <P>TIEMPO ESTIMADO:      _ _ _ _</P><br>
+            <p>TIEMPO DE SERVICIO:      _ _ _ _</p><br>
+            <P>ALMACENAMIENTO:      _ _ _ _</P><br>            
+            <P>TOTAL:      _ _ _ _</P>
+        </div>
+
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+</div>
+
+<script src="javascript.js"></script>
+</body>
+</html>

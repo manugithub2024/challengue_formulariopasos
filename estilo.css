@@ -1,0 +1,136 @@
+body {
+    font-family: arial;
+    background-color: #bfe0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contenedor {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 30%;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;  
+    margin-bottom: 30px;
+    color: #333;
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 3px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: table-column;
+    animation: fadeEffect 0.6s;
+}
+
+button {
+    background-color: #313c6e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+
+.plan {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20%;
+    width: 60%;
+    min-width: 300px;
+}
+.column {
+    padding: 10px;
+    border: 3px solid rgb(182, 163, 212);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.column input[type="radio"] {
+    display: none;
+}
+.column.selected {
+    background-color: #d0d0d0;
+}
+
+.complemento{
+    padding: 10px;
+    border: 3px solid rgb(182, 163, 212);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+#prevBtn:hover {
+    background-color: #aaa;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: #141313;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #824caf;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+
+    input {
+        font-size: 14px;
+    }
+}
